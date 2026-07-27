@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Generated data
+outputs/
+*.anki2
+*.apkg
+
+# Local config
+.env
+.DS_Store
