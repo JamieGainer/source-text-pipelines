@@ -31,3 +31,20 @@ tests/
 ## Status
 
 Initial repo scaffold.
+
+## General Vocabulary Glosses
+
+Create a vocabulary CSV from any plain text file:
+
+```sh
+python3 scripts/create_vocab_gloss_csv.py \
+  --input path/to/text.txt \
+  --output outputs/vocab_glosses.csv \
+  --language es \
+  --metadata "Short source description" \
+  --gloss-source wiktionary
+```
+
+The default output columns are `word`, `gloss`, and `metadata`. Optional flags can add `count` and `language`.
+
+Glosses can come from English Wiktionary with `--gloss-source wiktionary`, or from a local CSV/TSV with `--gloss-file path/to/glossary.tsv`. A glossary file should have `word` and `gloss` columns and is used as an override layer when supplied.
